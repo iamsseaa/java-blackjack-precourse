@@ -43,4 +43,17 @@ public class GameManager {
         }
         OutputView.outputDividedTwoCards();
     }
+
+    public static void askMoreCard() {
+        for (Player player : PlayerRepository.getPlayers()) {
+            while (InputView.inputMoreCard(player)) {
+                addMoreCard(player);
+            }
+        }
+    }
+
+    public static void addMoreCard(Player player) {
+        player.addCard(Deck.pickCard());
+        OutputView.printPlayerCards(player);
+    }
 }
