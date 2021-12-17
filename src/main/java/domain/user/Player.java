@@ -3,6 +3,7 @@ package domain.user;
 import domain.card.Card;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -26,4 +27,16 @@ public class Player {
         return name;
     }
 
+    public List<Card> getCards() {
+        return Collections.unmodifiableList(cards);
+    }
+
+    public String getPlayerSymbolType() {
+        String answer = "";
+        for (Card card : cards) {
+            answer += card.getSymbolType();
+            answer += " ";
+        }
+        return answer;
+    }
 }

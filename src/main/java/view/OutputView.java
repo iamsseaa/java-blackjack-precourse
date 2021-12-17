@@ -2,6 +2,8 @@ package view;
 
 import domain.user.Dealer;
 import domain.user.Player;
+import domain.user.PlayerRepository;
+import domain.util.ValidationConstant;
 
 import java.util.List;
 
@@ -17,6 +19,9 @@ public class OutputView {
 
     public static void outputPrintTwoCards(Dealer dealer) {
         System.out.println(Constant.DEALER_CARD + dealer.getSymbolType());
+        for (Player player : PlayerRepository.getPlayers()) {
+            System.out.println(player.getName() + Constant.PLAYER_CARD + player.getPlayerSymbolType());
+        }
     }
 
     public static void outputDealerUnderSixteen() {
