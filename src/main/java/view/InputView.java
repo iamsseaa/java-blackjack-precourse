@@ -1,6 +1,7 @@
 package view;
 
 import domain.user.Player;
+import domain.util.PlayerNameValidation;
 
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ public class InputView {
             try {
                 System.out.println(Constant.INPUT_NAME);
                 names = s.nextLine();
-                // 예외
+                PlayerNameValidation.validateName(names);
                 break;
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());

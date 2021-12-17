@@ -1,10 +1,18 @@
 package domain.util;
 
+import domain.divider.NameDivider;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 public class PlayerNameValidation {
+    public static void validateName(String names) {
+        isEmpty(names);
+        hasEmpty(names);
+        isDuplicated(NameDivider.divideNames(names));
+    }
+
     public static void isEmpty(String names) {
         if (names.length() == 0) {
             throw new IllegalArgumentException(ValidationConstant.ERROR_IS_EMPTY);
