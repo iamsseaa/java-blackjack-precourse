@@ -22,11 +22,11 @@ public class InputView {
         return names;
     }
 
-    public static int inputBettingMoney() {
+    public static int inputBettingMoney(String name) {
         String bettingMoney;
         while (true) {
             try {
-                System.out.println(Constant.INPUT_BETTING_MONEY);
+                System.out.println(name + Constant.INPUT_BETTING_MONEY);
                 bettingMoney = s.nextLine();
                 // 예외
                 break;
