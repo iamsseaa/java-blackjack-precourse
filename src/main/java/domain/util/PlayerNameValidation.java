@@ -7,4 +7,9 @@ public class PlayerNameValidation {
         }
     }
 
+    public static void hasEmpty(String names) {
+        if (names.contains(ValidationConstant.SPACE)) {
+            throw new IllegalArgumentException(ValidationConstant.ERROR_HAS_EMPTY);
+        }
+    }
 }
