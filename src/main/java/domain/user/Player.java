@@ -13,6 +13,7 @@ public class Player {
     private final String name;
     private final int bettingMoney;
     private final List<Card> cards = new ArrayList<>();
+    public int finalMoney;
 
     public Player(String name, int bettingMoney) {
         this.name = name;
@@ -21,6 +22,14 @@ public class Player {
 
     public void addCard(Card card) {
         cards.add(card);
+    }
+
+    public void setFinalMoney(int money) {
+        finalMoney = money;
+    }
+
+    public int getFinalMoney() {
+        return finalMoney;
     }
 
     public String getName() {
