@@ -6,5 +6,10 @@ public class BettingMoneyValidation {
             throw new IllegalArgumentException(ValidationConstant.ERROR_IS_NOT_NUMBER);
         }
     }
-    
+
+    public static void isPositive(String bettingMoney) {
+        if (Integer.parseInt(bettingMoney) < 0) {
+            throw new IllegalArgumentException(ValidationConstant.ERROR_IS_NOT_POSITIVE);
+        }
+    }
 }
