@@ -43,13 +43,13 @@ public class InputView {
     public static boolean inputMoreCard(Player player) {
         String name = player.getName();
         String choice;
-        boolean answer = true;
+        boolean answer;
         while (true) {
             try {
                 System.out.println(name + Constant.INPUT_MORE_CARD);
                 choice = s.nextLine();
                 PlusCardValidation.validatePlusCard(choice);
-                // y -> true, n -> false
+                answer = PlusCardValidation.returnBoolean(choice);
                 break;
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
