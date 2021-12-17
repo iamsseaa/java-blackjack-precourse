@@ -1,6 +1,7 @@
 import domain.card.Card;
 import domain.card.Deck;
 import domain.divider.NameDivider;
+import domain.score.ScoreCalculator;
 import domain.user.Dealer;
 import domain.user.Player;
 import domain.user.PlayerRepository;
@@ -55,5 +56,12 @@ public class GameManager {
     public static void addMoreCard(Player player) {
         player.addCard(Deck.pickCard());
         OutputView.printPlayerCards(player);
+    }
+
+    public static void addDealerMoreCard() {
+        if (ScoreCalculator.getScore(dealer.getCards()) <= 16) {
+            dealer.addCard(Deck.pickCard());
+        }
+        OutputView.outputDealerUnderSixteen();
     }
 }
