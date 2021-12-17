@@ -6,7 +6,7 @@ public class Constant {
     public static final String INPUT_MORE_CARD = "는 한장의 카드를 더 받곘습니까?(예는 y, 아니오는 n)";
 
     public static final String DEALER = "딜러";
-    public static final String AND = "와";
+    public static final String AND = "와 ";
     public static final String DELIMITER = ",";
     public static final String COLON = ": ";
     public static final String CARD = "카드";
