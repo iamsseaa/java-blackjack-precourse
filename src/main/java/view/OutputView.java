@@ -1,5 +1,6 @@
 package view;
 
+import domain.user.Dealer;
 import domain.user.Player;
 
 import java.util.List;
@@ -12,6 +13,10 @@ public class OutputView {
             System.out.print(Constant.DELIMITER);
         }
         System.out.println(Constant.OUTPUT_DIVIDED_CARD);
+    }
+
+    public static void outputPrintTwoCards(Dealer dealer) {
+        System.out.println(Constant.DEALER_CARD + dealer.getSymbolType());
     }
 
     public static void outputDealerUnderSixteen() {

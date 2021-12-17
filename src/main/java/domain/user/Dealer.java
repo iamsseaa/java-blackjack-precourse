@@ -17,5 +17,12 @@ public class Dealer {
         cards.add(card);
     }
 
-    // TODO 추가 기능 구현
+    public String getSymbolType() {
+        String answer = "";
+        for (Card card : cards) {
+            answer += card.getSymbolType();
+            answer += " ";
+        }
+        return answer;
+    }
 }
