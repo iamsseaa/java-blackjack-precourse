@@ -1,6 +1,7 @@
 package view;
 
 import domain.user.Player;
+import domain.util.BettingMoneyValidation;
 import domain.util.PlayerNameValidation;
 
 import java.util.Scanner;
@@ -29,7 +30,7 @@ public class InputView {
             try {
                 System.out.println(name + Constant.INPUT_BETTING_MONEY);
                 bettingMoney = s.nextLine();
-                // 예외
+                BettingMoneyValidation.validateBettingMoney(bettingMoney);
                 break;
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
