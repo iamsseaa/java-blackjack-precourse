@@ -19,4 +19,19 @@ public class InputView {
         }
         return names;
     }
+
+    public static int inputBettingMoney() {
+        String bettingMoney;
+        while (true) {
+            try {
+                System.out.println(Constant.INPUT_BETTING_MONEY);
+                bettingMoney = s.nextLine();
+                // 예외
+                break;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return Integer.parseInt(bettingMoney);
+    }
 }
