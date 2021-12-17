@@ -13,4 +13,8 @@ public class OutputView {
         }
         System.out.println(Constant.OUTPUT_DIVIDED_CARD);
     }
+
+    public static void outputDealerUnderSixteen() {
+        System.out.println(Constant.OUTPUT_DEALER_UNDER_SIXTEEN);
+    }
 }
