@@ -1,6 +1,8 @@
 package domain.util;
 
 public class ValidationConstant {
+    public static final String YES = "y";
+    public static final String NO = "n";
 
     public static final String ERROR = "[ERROR] ";
 

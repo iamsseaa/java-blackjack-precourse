@@ -3,6 +3,7 @@ package view;
 import domain.user.Player;
 import domain.util.BettingMoneyValidation;
 import domain.util.PlayerNameValidation;
+import domain.util.PlusCardValidation;
 
 import java.util.Scanner;
 
@@ -47,7 +48,7 @@ public class InputView {
             try {
                 System.out.println(name + Constant.INPUT_MORE_CARD);
                 choice = s.nextLine();
-                // 예외
+                PlusCardValidation.validatePlusCard(choice);
                 // y -> true, n -> false
                 break;
             } catch (IllegalArgumentException e) {
