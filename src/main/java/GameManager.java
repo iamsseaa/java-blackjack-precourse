@@ -1,5 +1,3 @@
-package domain;
-
 import domain.card.Card;
 import domain.card.Deck;
 import domain.divider.NameDivider;
