@@ -1,5 +1,7 @@
 package view;
 
+import domain.user.Player;
+
 import java.util.Scanner;
 
 public class InputView {
@@ -33,5 +35,23 @@ public class InputView {
             }
         }
         return Integer.parseInt(bettingMoney);
+    }
+
+    public static boolean inputMoreCard(Player player) {
+        String name = player.getName();
+        String choice;
+        boolean answer = true;
+        while (true) {
+            try {
+                System.out.println(name + Constant.INPUT_MORE_CARD);
+                choice = s.nextLine();
+                // 예외
+                // y -> true, n -> false
+                break;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return answer;
     }
 }
