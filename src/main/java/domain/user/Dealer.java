@@ -11,11 +11,20 @@ import java.util.List;
  */
 public class Dealer {
     private final List<Card> cards = new ArrayList<>();
+    public int finalMoney;
 
     public Dealer() {}
 
     public void addCard(Card card) {
         cards.add(card);
+    }
+
+    public void setFinalMoney(int money) {
+        finalMoney = money;
+    }
+
+    public int getFinalMoney() {
+        return finalMoney;
     }
 
     public String getSymbolType() {
