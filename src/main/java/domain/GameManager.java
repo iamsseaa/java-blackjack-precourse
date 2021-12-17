@@ -37,4 +37,10 @@ public class GameManager {
         }
     }
 
+    public static void makePlayerTwoCards() {
+        for (Player player : PlayerRepository.getPlayers()) {
+            Card card = Deck.pickCard();
+            player.addCard(card);
+        }
+    }
 }
