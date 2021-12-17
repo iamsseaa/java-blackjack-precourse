@@ -8,9 +8,9 @@ import domain.util.ValidationConstant;
 import java.util.List;
 
 public class OutputView {
-    public static void outputDividedTwoCards(List<Player> players) {
+    public static void outputDividedTwoCards() {
         System.out.print(Constant.DEALER + Constant.AND);
-        for (Player player : players) {
+        for (Player player : PlayerRepository.getPlayers()) {
             System.out.print(player.getName());
             System.out.print(Constant.DELIMITER);
         }

@@ -7,6 +7,7 @@ import domain.user.Dealer;
 import domain.user.Player;
 import domain.user.PlayerRepository;
 import view.InputView;
+import view.OutputView;
 
 import java.util.List;
 
@@ -42,5 +43,6 @@ public class GameManager {
             Card card = Deck.pickCard();
             player.addCard(card);
         }
+        OutputView.outputDividedTwoCards();
     }
 }
