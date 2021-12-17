@@ -17,11 +17,15 @@ public class OutputView {
         System.out.println(Constant.OUTPUT_DIVIDED_CARD);
     }
 
-    public static void outputPrintTwoCards(Dealer dealer) {
+    public static void printAllCards(Dealer dealer) {
         System.out.println(Constant.DEALER_CARD + dealer.getSymbolType());
         for (Player player : PlayerRepository.getPlayers()) {
-            System.out.println(player.getName() + Constant.PLAYER_CARD + player.getPlayerSymbolType());
+            printPlayerCards(player);
         }
+    }
+
+    public static void printPlayerCards(Player player) {
+        System.out.println(player.getName() + Constant.PLAYER_CARD + player.getPlayerSymbolType());
     }
 
     public static void outputDealerUnderSixteen() {
