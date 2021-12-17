@@ -5,13 +5,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class PlayerRepository {
-    List<Player> players = new ArrayList<>();
+    static List<Player> players = new ArrayList<>();
 
-    public void addPlayer(Player player) {
+    public static void addPlayer(Player player) {
         players.add(player);
     }
 
-    public List<Player> getPlayers() {
+    public static List<Player> getPlayers() {
         return Collections.unmodifiableList(players);
     }
 }
