@@ -40,4 +40,8 @@ public class Card {
     public String getSymbolType() {
         return symbol.toString() + type.toString();
     }
+
+    public int getScore() {
+        return symbol.getScore();
+    }
 }
